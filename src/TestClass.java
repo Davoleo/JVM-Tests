@@ -1,4 +1,9 @@
-
+/*************************************************
+ * Author: Davoleo
+ * Date: 24/4/18
+ * Hour: ##:##
+ * Copyright - © - Davoleo - 2018
+**************************************************/
 //Packages per importare i comandi
 //import java.lang.*;
 
@@ -66,10 +71,11 @@ public class TestClass {
 
 
 
-
-
             int                  variabile               =                  0;
         //  tipo                 identificatore         diventa             valore
+
+
+
         double percentualeInteresse = 2.5;  //percentuale interesse annuale
         double sommaDepositata = 1000;      //in euro
 
