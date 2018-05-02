@@ -60,8 +60,14 @@ public class OperatoriBinari {
 
         /*
         d1 = 100 + 34.81;   Si, promossione da int a double (no perdita dati)
-        i1 = 100 + 34.81;   NO, retrocessione da double a int (perdita di dati, il compilatore evita)
+        i1 = 100 + 34.81;   NO, retrocessione da double a int (perdita di dati, il compilatore evita a meno che non si ponga un cast)
         */
+
+        String ciao = "cia" + 'o' + '!';
+        System.out.println(ciao);
+
+        String cose = "ciao" + true;
+        System.out.println(cose);
 
     }
 }
