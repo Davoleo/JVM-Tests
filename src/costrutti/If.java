@@ -45,6 +45,6 @@ public class If {
         System.out.println("potresti essere giovane... come potresti essere VECCHIOOOOOO");
         //Short evaluation: per le condizioni complesse, se la prima è falsa non valutà la seconda
         // può funzionare anche come condizioni di esistenza :)
-        
+
     }
 }
