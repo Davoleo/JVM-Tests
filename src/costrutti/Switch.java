@@ -1,3 +1,10 @@
+/*************************************************
+ * Author: Davoleo
+ * Date: 9/5/18
+ * Hour: 00:00
+ * Copyright - © - Davoleo - 2018
+ **************************************************/
+
 package costrutti;
 
 public class Switch {
@@ -31,7 +38,7 @@ public class Switch {
                 break;
 
             default:
-                System.out.pritln("erratus est! :P");
+                System.out.println("erratus est! :P");
                 break;
 
         }
