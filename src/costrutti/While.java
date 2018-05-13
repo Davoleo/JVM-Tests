@@ -6,7 +6,6 @@
  **************************************************/
 
 package costrutti;
-import java.time.Clock;
 import java.util.Scanner;
 
 public class While {
