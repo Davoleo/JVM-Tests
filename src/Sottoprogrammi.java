@@ -47,6 +47,14 @@ public class Sottoprogrammi {
             rigaSimboliLn(simbolo,lunghezza);
     }
 
+    //Avanzate circa i metodi
+    public static void raddoppia (int numero)
+    {
+        System.out.println("Ho ricevuto il numero: " + numero + "\n");
+        numero *= 2;
+        System.out.println("Che raddoppiato fa: " + numero + "\n");
+    }
+
 
     //main section
 
@@ -60,6 +68,10 @@ public class Sottoprogrammi {
         //prefabbricati che non fanno nulla di superfluo come output o input a meno che non sia la loro direttiva principale
         double radice = Math.sqrt(15.8);
 
+        int n = 333;
+        raddoppia(n);
+        System.out.println("Dopo il richiamo del metodo: " +n+ "\n");
+
         // ...altre istruzioni
 
         //richiamo del metodo
@@ -68,6 +80,7 @@ public class Sottoprogrammi {
         messaggio("ATTENZIONE: LAVORI IN CORSO", '◬', 40);
 
         //...altre istruzioni...
+
 
     }
 
