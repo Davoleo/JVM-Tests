@@ -7,19 +7,48 @@
 
 public class Sottoprogrammi {
 
-    static void messaggio(String ilMessaggio, char simbolo, int lunghezza)
-        {
+    //messaggi prefabbricati versione 1
 
-            for(int j=0; j<lunghezza; j++)
+    public static void rigaSimboliCn(char simbolo, int lunghezza)
+    {rigaSimboli(simbolo, lunghezza, false);}
+
+    public static void rigaSimboliLn(char simbolo, int lunghezza)
+    { rigaSimboli(simbolo, lunghezza, true);}
+
+    public static void rigaSimboli(char simbolo, int lunghezza, boolean aCapo)
+    {
+        for(int j=0; j<lunghezza; j++)
             System.out.print(simbolo);
+
+        if(aCapo)
+            System.out.println();
+    }
+
+    //riga di simboli versione 2
+
+    static String clona(char simbolo, int quanteVolte)
+    {
+        String riga = "";
+        for(int i=0; i<quanteVolte; i++)
+            riga+=simbolo;
+        return riga;
+    }
+
+
+    static void messaggio(String ilMessaggio, char simbolo, int lunghezza)
+    {
+            //String riga = clona(simbolo, lunghezza);
+            //System.out.println(riga);
+
+            rigaSimboliCn(simbolo, lunghezza);
 
             System.out.println("\n" + ilMessaggio);
 
-            for(int j=0; j<lunghezza; j++)
-            System.out.print(simbolo);
-            System.out.println();
+            rigaSimboliLn(simbolo,lunghezza);
+    }
 
-        }
+
+    //main section
 
     public static void main(String[] args) {
 
@@ -36,7 +65,7 @@ public class Sottoprogrammi {
         //richiamo del metodo
         messaggio("ciao ciao....", '-', 30);
 
-        messaggio("ATTENZIONE: LAVORI IN CORSO", '◬', 50);
+        messaggio("ATTENZIONE: LAVORI IN CORSO", '◬', 40);
 
         //...altre istruzioni...
 
