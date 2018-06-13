@@ -1,0 +1,36 @@
+/*************************************************
+ * Author: Davoleo
+ * Date: 14/6/18
+ * Hour: 01:00
+ * Copyright - © - Davoleo - 2018
+ **************************************************/
+
+import java.util.Random;
+
+public class Arrays {
+    public static void main (String [] args)
+    {
+     //non si tratta di un tipo primitivo (situazione simile alle String)
+        //elenco di cellette più o meno lungo nel quale si possono memorizzare dei dati detti elementi
+        //gli array monodimensionali sono detti anche vettori
+
+        Random r = new Random();
+        double totaleIncassi = 0;
+        double[] incassiGiornalieri = new double [30];
+
+        for (int giorno = 0; giorno<30; giorno++)
+        {
+            System.out.print("Inserire l'incasso per il giorno "+giorno+ ": ");
+            incassiGiornalieri[giorno] = r.nextDouble()*10000;
+            System.out.println(incassiGiornalieri[giorno]);
+            totaleIncassi+=incassiGiornalieri[giorno];
+        }
+        double mediaIncassi = totaleIncassi/30;
+        System.out.println("\nIncasso medio giornaliero: "+mediaIncassi);
+
+        for(int giorno = 0; giorno<30; giorno ++)   //scannerizza tutte le celle dell'array
+        if(incassiGiornalieri[giorno] < mediaIncassi)
+            System.out.println("Il giorno " + (giorno+1) + " del mese l'incasso " + "(" + incassiGiornalieri[giorno]+") risulta " + "inferiore alla media");
+    }
+
+}
