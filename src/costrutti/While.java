@@ -72,5 +72,19 @@ public class While {
         }
         System.out.println("Terminato con valore: " + somma1000);
 
+        /*Ciclio Do-While
+
+        Caratteristiche:
+        Condizione in coda
+        Il codice viene eseguito almeno una volta prima di verificare la condizione
+        */
+        int cont = 0;
+        do
+            {
+                System.out.println("HI EVERYONE");
+                cont ++;
+            }
+                while (cont<11);
+
     }
 }

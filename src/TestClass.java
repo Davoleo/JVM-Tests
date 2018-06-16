@@ -75,6 +75,10 @@ public class TestClass {
         //  tipo                 identificatore         diventa             valore
 
 
+        int esa = 0xA2;     //numero esadecimale inizializzato dal 0x
+        int ott = 0712;     //numero ottale
+
+
 
         double percentualeInteresse = 2.5;  //percentuale interesse annuale
         double sommaDepositata = 1000;      //in euro

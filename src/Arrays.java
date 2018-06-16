@@ -13,6 +13,9 @@ public class Arrays {
      //non si tratta di un tipo primitivo (situazione simile alle String)
         //elenco di cellette più o meno lungo nel quale si possono memorizzare dei dati detti elementi
         //gli array monodimensionali sono detti anche vettori
+        //Mai andare oltre il limite degli array poiché non c'è un blocco e da errore:
+        //ArrayOutOfBoundsException
+
 
         Random r = new Random();
         double totaleIncassi = 0;
@@ -31,6 +34,8 @@ public class Arrays {
         for(int giorno = 0; giorno<30; giorno ++)   //scannerizza tutte le celle dell'array
         if(incassiGiornalieri[giorno] < mediaIncassi)
             System.out.println("Il giorno " + (giorno+1) + " del mese l'incasso " + "(" + incassiGiornalieri[giorno]+") risulta " + "inferiore alla media");
+
+        String[] giorniSettimana = {"Lunedì", "Martedì", "Mercoledì", "Giovedì","Venerdì","Sabato","Domenica"};
     }
 
 }
