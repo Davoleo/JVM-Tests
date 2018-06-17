@@ -37,8 +37,6 @@ public class Arrays {
 
         String[] giorniSettimana = {"Lunedì", "Martedì", "Mercoledì", "Giovedì","Venerdì","Sabato","Domenica"};
 
-        S
-
     }
 
 }
