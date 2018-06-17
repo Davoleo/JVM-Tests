@@ -36,6 +36,9 @@ public class Arrays {
             System.out.println("Il giorno " + (giorno+1) + " del mese l'incasso " + "(" + incassiGiornalieri[giorno]+") risulta " + "inferiore alla media");
 
         String[] giorniSettimana = {"Lunedì", "Martedì", "Mercoledì", "Giovedì","Venerdì","Sabato","Domenica"};
+
+        S
+
     }
 
 }
