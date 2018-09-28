@@ -55,6 +55,10 @@ public class OperatoriBinari {
         /*va rappresentato con la virgola oppure con una f altrimenti tutta l'operazione
         torna agli interi, oppure effettuando un Cast*/
 
+        //operatore di resto
+        int resto = 11 % 3;
+        System.out.println(resto);
+
         char c6 = 'a' / (char) 3;
         System.out.println("#" + c6 + "#");
 
