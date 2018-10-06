@@ -1,13 +1,14 @@
-/*************************************************
- * Author: Davoleo
- * Date: 14/6/18
- * Hour: 01:00
- * Copyright - © - Davoleo - 2018
- **************************************************/
-
 import java.util.Random;
 
 public class Arrays {
+
+    /*************************************************
+     * Author: Davoleo
+     * Date: 14/6/18
+     * Hour: 01:00
+     * Copyright - © - Davoleo - 2018
+     **************************************************/
+
     public static void main (String [] args)
     {
      //non si tratta di un tipo primitivo (situazione simile alle String)

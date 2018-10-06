@@ -1,13 +1,15 @@
-/*************************************************
- * Author: Davoleo
- * Date: 4/5/18
- * Hour: 22:14
- * Copyright - © - Davoleo - 2018
- **************************************************/
-
 package costrutti;
 
 public class If {
+
+    /*************************************************
+     * Author: Davoleo
+     * Date: 4/5/18
+     * Hour: 22:14
+     * Copyright - © - Davoleo - 2018
+     **************************************************/
+
+
     public static void main(String[] args) {
 
         //Struttura selettiva, programma in grado di scegliere
@@ -45,6 +47,11 @@ public class If {
         System.out.println("potresti essere giovane... come potresti essere VECCHIOOOOOO");
         //Short evaluation: per le condizioni complesse, se la prima è falsa non valutà la seconda
         // può funzionare anche come condizioni di esistenza :)
+
+
+        //Operatore condizionale ternario (Per le condizioni brevi)
+        System.out.println((eta != 98) ? "diverso da 98 :P" : "uguale a 98");
+
 
     }
 }

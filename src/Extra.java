@@ -1,13 +1,14 @@
-/*************************************************
- * Author: Davoleo
- * Date: 16/6/18
- * Hour: 20:00
- * Copyright - © - Davoleo - 2018
- **************************************************/
-
 import java.io.*;
 
 public class Extra {
+
+    /*************************************************
+     * Author: Davoleo
+     * Date: 16/6/18
+     * Hour: 20:00
+     * Copyright - © - Davoleo - 2018
+     **************************************************/
+
     public static void main(String[] args) {
         //Sequenze di escape
         //Codici utilizzabili nei char e nelle string che corrispondono a certe azioni

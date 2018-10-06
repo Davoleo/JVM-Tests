@@ -1,13 +1,14 @@
-/*************************************************
- * Author: Davoleo
- * Date: 2/5/18
- * Hour: 18:50
- * Copyright - © - Davoleo - 2018
- **************************************************/
-
 package operatori;
 
 public class OperatoriBinari {
+
+    /*************************************************
+     * Author: Davoleo
+     * Date: 2/5/18
+     * Hour: 18:50
+     * Copyright - © - Davoleo - 2018
+     **************************************************/
+
     public static void main(String[] args) {
         //Binari, quando agiscono su 2 espressioni (infissi)
 

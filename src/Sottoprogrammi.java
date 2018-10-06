@@ -1,11 +1,11 @@
-/*************************************************
- * Author: Davoleo
- * Date: 13/5/18
- * Hour: 20:55
- * Copyright - © - Davoleo - 2018
- **************************************************/
-
 public class Sottoprogrammi {
+
+    /*************************************************
+     * Author: Davoleo
+     * Date: 13/5/18
+     * Hour: 20:55
+     * Copyright - © - Davoleo - 2018
+     **************************************************/
 
     //messaggi prefabbricati versione 1
 

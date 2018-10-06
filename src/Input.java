@@ -1,13 +1,14 @@
-/*************************************************
- * Author: Davoleo
- * Date: 9/5/18
- * Hour: 00:30
- * Copyright - © - Davoleo - 2018
- **************************************************/
-
 import java.util.Scanner;
 
 public class Input {
+
+    /*************************************************
+     * Author: Davoleo
+     * Date: 9/5/18
+     * Hour: 00:30
+     * Copyright - © - Davoleo - 2018
+     **************************************************/
+
     public static void main(String[] args){
 
         //System.in è il flusso di input di default; quello da tastiera

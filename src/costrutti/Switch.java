@@ -1,13 +1,14 @@
-/*************************************************
- * Author: Davoleo
- * Date: 9/5/18
- * Hour: 00:00
- * Copyright - © - Davoleo - 2018
- **************************************************/
-
 package costrutti;
 
 public class Switch {
+
+    /*************************************************
+     * Author: Davoleo
+     * Date: 9/5/18
+     * Hour: 00:00
+     * Copyright - © - Davoleo - 2018
+     **************************************************/
+
     public static void main(String[] args) {
         //Struttura selettiva multipla
 

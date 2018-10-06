@@ -1,14 +1,15 @@
-/*************************************************
- * Author: Davoleo
- * Date: 9/5/18
- * Hour: 23:35
- * Copyright - © - Davoleo - 2018
- **************************************************/
-
 package costrutti;
 import java.util.Scanner;
 
 public class While {
+
+    /*************************************************
+     * Author: Davoleo
+     * Date: 9/5/18
+     * Hour: 23:35
+     * Copyright - © - Davoleo - 2018
+     **************************************************/
+
     public static void main(String[] args){
         //i cicli, struttura iterativa (di ripetizione)
         //ripetizione per vero, uscita per falso

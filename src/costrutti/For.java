@@ -1,13 +1,15 @@
-/*************************************************
- * Author: Davoleo
- * Date: 10/5/18
- * Hour: 15:55
- * Copyright - © - Davoleo - 2018
- **************************************************/
-
 package costrutti;
 
 public class For {
+
+    /*************************************************
+     * Author: Davoleo
+     * Date: 10/5/18
+     * Hour: 15:55
+     * Copyright - © - Davoleo - 2018
+     **************************************************/
+
+
     public static void main(String[] args){
         //ciclo enumerativo
         //solitamtente utilizzato quando si sa il numero di cicli da far compiere al codice

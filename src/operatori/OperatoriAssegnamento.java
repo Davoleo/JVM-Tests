@@ -1,13 +1,14 @@
-/*************************************************
- * Author: Davoleo
- * Date: 4/5/18
- * Hour: 21:31
- * Copyright - © - Davoleo - 2018
- **************************************************/
-
 package operatori;
 
 public class OperatoriAssegnamento {
+
+    /*************************************************
+     * Author: Davoleo
+     * Date: 4/5/18
+     * Hour: 21:31
+     * Copyright - © - Davoleo - 2018
+     **************************************************/
+
     public static void main(String[] args) {
 
         int n = 10;

@@ -1,13 +1,14 @@
-/*************************************************
- * Author: Davoleo
- * Date: 4/5/18
- * Hour: 21:45
- * Copyright - © - Davoleo - 2018
- **************************************************/
-
 package operatori;
 
 public class OperatoriRelazionali {
+
+    /*************************************************
+     * Author: Davoleo
+     * Date: 4/5/18
+     * Hour: 21:45
+     * Copyright - © - Davoleo - 2018
+     **************************************************/
+
     public static void main(String[] args) {
 
         //operatore di uguaglianza == (DOPPIO uguale)

@@ -1,13 +1,13 @@
-/*************************************************
- * Author: Davoleo
- * Date: 1/5/18
- * Hour: 11:00
- * Copyright - © - Davoleo - 2018
- **************************************************/
-
 package operatori;
 
 public class OperatoriUnari {
+
+    /*************************************************
+     * Author: Davoleo
+     * Date: 1/5/18
+     * Hour: 11:00
+     * Copyright - © - Davoleo - 2018
+     **************************************************/
 
     public static void main(String[] args) {
         System.out.println("8989898");
