@@ -73,7 +73,7 @@ public class While {
         }
         System.out.println("Terminato con valore: " + somma1000);
 
-        /*Ciclio Do-While
+        /*Ciclo Do-While
 
         Caratteristiche:
         Condizione in coda
