@@ -26,7 +26,7 @@ public class Media {
 
         while(contatore < quantita)
         {
-            System.out.println("Inserisci il " + ((int)contatore + 1) + "° numero: ");
+            System.out.println("Inserisci il " + (contatore + 1) + "° numero: ");
             n = tastiera.nextInt();
             somma += n;
             contatore++;
