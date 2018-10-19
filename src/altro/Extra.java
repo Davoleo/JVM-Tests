@@ -1,3 +1,5 @@
+package altro;
+
 import java.io.*;
 
 public class Extra {

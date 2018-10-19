@@ -1,3 +1,5 @@
+package altro;
+
 /*************************************************
  * Author: Davoleo
  * Date: 19/10/2018
@@ -6,7 +8,7 @@
  * Copyright - © - Davoleo - 2018
  **************************************************/
 
-public class MathMethods {
+public class Matematica {
     public static void main(String[] args)
     {
         //Valore assoluto
