@@ -50,7 +50,7 @@ public class If {
 
 
         //Operatore condizionale ternario (Per le condizioni brevi)
-        System.out.println((eta != 98) ? "diverso da 98 :P" : "uguale a 98");
+        System.out.println(eta != 98 ? "diverso da 98 :P" : "uguale a 98");
 
 
         //Nested if statements
