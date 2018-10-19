@@ -11,6 +11,13 @@ public class Helper {
     //Stato interno
     private String girlName;
 
+    public Helper()
+    {}
+
+    public Helper(String name)
+    {
+         girlName = name;
+    }
 
     public void simpleMessage(String name)
     {

@@ -53,5 +53,30 @@ public class If {
         System.out.println((eta != 98) ? "diverso da 98 :P" : "uguale a 98");
 
 
+        //Nested if statements
+        int age = 60;
+
+        if(age < 50)
+            System.out.println("Sei giovane");
+        else
+        {
+            System.out.println("Sei vecchio");
+            if(age>75)
+                System.out.println("Sei molto vecchio");
+            else
+                System.out.println("Non preoccuparti non sei così tanto vecchio");
+        }
+
+        //Else if statement
+        //test alternativi, solo quando la condizione principale non si avvera
+
+        if(age >= 60)
+            System.out.println("Sei un cittadino senior");
+        else if (age >= 50)
+            System.out.println("Sei cinquantenne");
+        else
+            System.out.println("Sei un giovanotto");
+
+
     }
 }
