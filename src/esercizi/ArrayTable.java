@@ -1,5 +1,7 @@
 package esercizi;
 
+import java.util.Random;
+
 /*************************************************
  * Author: Davoleo
  * Date: 26/10/2018
@@ -19,5 +21,20 @@ public class ArrayTable {
         {
             System.out.println(i+1 + "\t\t" + array[i]);
         }
+
+        System.out.println("-------------------------------------------------------------");
+
+
+        Random rand = new Random();
+        int frequenza[] = new int[7];
+
+        for (int roll=0; roll<1000; roll++)
+            ++frequenza[1 + rand.nextInt(6)];
+
+        System.out.println("Faccia\tFrequenza");
+
+        for (int faccia=1; faccia<frequenza.length; faccia++)
+            System.out.println(faccia + "\t\t" + frequenza[faccia]);
+
     }
 }

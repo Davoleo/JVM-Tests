@@ -40,6 +40,18 @@ public class Array {
 
         String[] giorniSettimana = {"Lunedì", "Martedì", "Mercoledì", "Giovedì","Venerdì","Sabato","Domenica"};
 
+
+        int array[]={3,4,5,6,7,8};
+        add5(array);
+        for(int y : array)
+            System.out.println();
+
+    }
+
+    private static void add5(int x[])
+    {
+        for(int i=0; i<x.length; i++)
+            x[i]+=5;
     }
 
 }
