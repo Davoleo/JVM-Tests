@@ -26,15 +26,15 @@ public class Alpaca {
             case "advanced_hello":
             Helper h1 = new Helper();
 
-            System.out.println("Enter your name here: ");
+            System.out.println("Inserisci il tuo nome: ");
             String name = tastiera.nextLine();
-            System.out.println("Enter name of first gf here: ");
+            System.out.println("Inserisci il nome della tua prima ragazza: ");
             h1.setGirlName(tastiera.nextLine());
             h1.simpleMessage(name);
             break;
 
             case "constructors":
-                Helper h2 = new Helper("Artemis");
+                Helper h2 = new Helper("Guidobalda");
                 h2.simpleMessage("GESU'");
                 break;
 

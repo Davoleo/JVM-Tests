@@ -2,7 +2,7 @@ package altro;
 
 import java.util.Random;
 
-public class Arrays {
+public class Array {
 
     /*************************************************
      * Author: Davoleo

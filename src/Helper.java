@@ -21,8 +21,8 @@ public class Helper {
 
     public void simpleMessage(String name)
     {
-        System.out.println("Hello " + name);
-        System.out.printf("Your first girlfriend was %s \n", this.getGirlName());
+        System.out.println("Ciao " + name);
+        System.out.printf("La tua prima ragazza era %s \n", this.getGirlName());
     }
 
 
