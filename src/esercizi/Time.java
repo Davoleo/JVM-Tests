@@ -8,9 +8,9 @@ public class Time {
 
     public void setTime(int hh, int mm, int ss)
     {
-        this.hh = ((hh > 0 && hh < 24) ? hh : 0);
-        this.mm = ((mm > 0 && mm < 60) ? mm : 0);
-        this.ss = ((ss > 0 && ss < 60) ? ss : 0);
+        this.hh = ((hh >= 0 && hh < 24) ? hh : 0);
+        this.mm = ((mm >= 0 && mm < 60) ? mm : 0);
+        this.ss = ((ss >= 0 && ss < 60) ? ss : 0);
     }
 
     public String toMilitary()
