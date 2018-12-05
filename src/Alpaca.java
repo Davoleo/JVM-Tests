@@ -1,3 +1,5 @@
+import esercizi.Time;
+
 import java.util.Scanner;
 
 /*************************************************
@@ -18,7 +20,7 @@ public class Alpaca {
         //Advanced Hello World
         String section;
         System.out.println("Inserisci la sezione che vuoi avviare: ");
-        System.out.println("Sezioni: 'advanced_hello' | 'constructors'");
+        System.out.println("Sezioni: 'advanced_hello' | 'constructors' | 'VLAM' | 'time'");
         section = tastiera.nextLine();
 
         switch (section)
@@ -36,6 +38,19 @@ public class Alpaca {
             case "constructors":
                 Helper h2 = new Helper("Guidobalda");
                 h2.simpleMessage("GESU'");
+                break;
+
+                //Sta per Variable Length Arguments Methods
+            case "VLAM":
+                System.out.println(Helper.average(12,21,54,23,8));
+                break;
+
+            case "time":
+                Time time = new Time();
+
+                time.setTime(20, 43, 3);
+                System.out.println(time.toMilitary());
+                System.out.println(time.toString());
                 break;
 
                 default:
