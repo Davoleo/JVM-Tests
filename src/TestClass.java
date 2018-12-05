@@ -88,5 +88,18 @@ public class TestClass {
         sommaDepositata = sommaDepositata + (sommaDepositata/100) * percentualeInteresse;
         System.out.println("Dopo un anno avrai " + sommaDepositata + " €");
 
+        String data = "11-22-3333";
+        System.out.println("Data in input: " + data);
+        System.out.println("Data in output: " + reverseData(data));
+
+    }
+
+    private static String reverseData(String data)
+    {
+        int dd = Integer.parseInt(data.substring(0, 2));
+        int mm = Integer.parseInt(data.substring(3, 5));
+        int yyyy = Integer.parseInt(data.substring(6, 10));
+
+        return yyyy + "-" + mm + "-" + dd;
     }
 }
