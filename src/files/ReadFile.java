@@ -12,7 +12,7 @@ import java.util.Scanner;
  * Copyright - © - Davoleo - 2018
  **************************************************/
 
-public class ReadFile {
+class ReadFile {
 
     private Scanner scanner;
 
