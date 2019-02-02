@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class Calculator {
 
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         Scanner tastiera = new Scanner(System.in);
         short id;
