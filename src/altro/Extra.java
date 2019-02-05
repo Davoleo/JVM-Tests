@@ -46,5 +46,20 @@ public class Extra {
 
         System.out.println("Il codice asci del carattere inserito è: " + carattereLetto);
 
+        System.out.println(factorial(100));
+
+    }
+
+    /**
+     * Controlled recursive call
+     * @param n number you need the factorial of
+     * @return factorial of n
+     */
+    private static long factorial(long n)
+    {
+        if (n <= 1)
+            return 1;
+        else
+            return factorial(n - 1);
     }
 }
