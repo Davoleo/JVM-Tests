@@ -62,6 +62,18 @@ public class Collections {
         printList(list3);
         printReversedList(list3);
 
+        //-----------------------------------------------------------------------------------------------------------
+        //List2Arrays & Arrays2List
+        String[] asdf = {"babies", "watermelong", "melons", "fudge"};
+        LinkedList<String> thelist = new LinkedList<>(Arrays.asList(asdf));
+
+        thelist.add("pumpkin");
+        thelist.addFirst("firstthing");
+
+        asdf = thelist.toArray(new String[thelist.size()]);
+
+        for (String s : asdf)
+            System.out.printf("%s ", s);
 
     }
 
