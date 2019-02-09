@@ -75,6 +75,46 @@ public class Collections {
         for (String s : asdf)
             System.out.printf("%s ", s);
 
+        //-----------------------------------------------------------------------------------------------------------
+        //sort | reverse | copy | fill methods
+
+        //Sort (Alphabetical order)
+        System.out.println();
+        String[] crap = {"apples", "lemons", "geese", "bacon", "lal"};
+        List<String> l1 = Arrays.asList(crap);
+
+        java.util.Collections.sort(l1);
+        System.out.printf("%s\n", l1);
+
+        java.util.Collections.sort(l1, java.util.Collections.reverseOrder());
+        System.out.printf("%s\n", l1);
+
+        // Reverse
+        Character[] ray = {'p', 'w', 'n'};
+        List<Character> l = Arrays.asList(ray);
+        System.out.println("The list is: ");
+        output(l);
+
+        java.util.Collections.reverse(l);
+        System.out.println("After reverse: ");
+        output(l);
+
+        //Copy
+        Character[] newRay = new Character[3];
+        List<Character> listCopy = Arrays.asList(newRay);
+        java.util.Collections.copy(listCopy, l);
+        System.out.println("Copy of l: ");
+        output(listCopy);
+
+        //Fill Collections
+        java.util.Collections.fill(l, 'X');
+        System.out.println("After filling the list with X: ");
+        output(l);
+
+
+
+
+
     }
 
     /**
@@ -123,6 +163,13 @@ public class Collections {
             if (list2.contains(iterator.next()))
                 iterator.remove();
 
+    }
+
+    private static void output(List<Character> list)
+    {
+        for (char c : list)
+            System.out.printf("%s ", c);
+        System.out.println();
     }
 
 
