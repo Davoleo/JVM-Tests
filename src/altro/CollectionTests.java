@@ -5,12 +5,12 @@ import java.util.*;
 /*************************************************
  * Author: Davoleo
  * Date / Hour: 05/02/2019 / 15:27
- * Class: Collections
+ * Class: CollectionTests
  * Project: JavaBase
  * Copyright - © - Davoleo - 2019
  **************************************************/
 
-public class Collections {
+public class CollectionTests {
 
     public static void main(String[] args)
     {
@@ -76,45 +76,52 @@ public class Collections {
             System.out.printf("%s ", s);
 
         //-----------------------------------------------------------------------------------------------------------
-        //sort | reverse | copy | fill methods
+        //sort | reverse | copy | fill methods | frequency | disjoint
 
         //Sort (Alphabetical order)
         System.out.println();
         String[] crap = {"apples", "lemons", "geese", "bacon", "lal"};
         List<String> l1 = Arrays.asList(crap);
 
-        java.util.Collections.sort(l1);
+        Collections.sort(l1);
         System.out.printf("%s\n", l1);
 
-        java.util.Collections.sort(l1, java.util.Collections.reverseOrder());
+        Collections.sort(l1, Collections.reverseOrder());
         System.out.printf("%s\n", l1);
 
-        // Reverse
+        //Reverse
         Character[] ray = {'p', 'w', 'n'};
         List<Character> l = Arrays.asList(ray);
         System.out.println("The list is: ");
         output(l);
 
-        java.util.Collections.reverse(l);
+        Collections.reverse(l);
         System.out.println("After reverse: ");
         output(l);
 
         //Copy
         Character[] newRay = new Character[3];
         List<Character> listCopy = Arrays.asList(newRay);
-        java.util.Collections.copy(listCopy, l);
+        Collections.copy(listCopy, l);
         System.out.println("Copy of l: ");
         output(listCopy);
 
-        //Fill Collections
-        java.util.Collections.fill(l, 'X');
+        //Fill CollectionTests
+        Collections.fill(l, 'X');
         System.out.println("After filling the list with X: ");
         output(l);
 
+        //Frequency (Number of times a certain object is in the Collection)
+        System.out.println(Collections.frequency(l, 'X'));
 
+        //Disjoint (True if they have nothing in common)
+        boolean ToF = Collections.disjoint(l, listCopy);
+        System.out.println(ToF);
 
-
-
+        //AddAll (Adds all the objects to the list)
+        List<Character> charlist = new ArrayList<>(); charlist.add('a'); charlist.add('b');
+        Collections.addAll(charlist, 'p', 'l', 'w');
+        System.out.println(charlist);
     }
 
     /**
