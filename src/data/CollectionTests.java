@@ -1,4 +1,4 @@
-package altro;
+package data;
 
 import java.util.*;
 

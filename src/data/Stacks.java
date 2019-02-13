@@ -1,4 +1,4 @@
-package altro;
+package data;
 
 import java.util.Stack;
 
@@ -15,6 +15,7 @@ public class Stacks {
     /**
      * Data Structure
      * A pile of something
+     * The element on top ALWAYS has the priority
      * Methods:
      * push: Adds an element to the top of the stack
      * pop: Removes the element on top of the stack
