@@ -20,6 +20,11 @@ public class GenericMethods {
 
         //printMe(iray);
         //printMe(cray);
+
+        System.out.println();
+        System.out.println("The maximum is: " +  max(23, 42, 1));
+        System.out.println("The maximum is: " +  max('s', 'è', '?'));
+        System.out.println("The maximum is: " +  max("ASD", "AJL", "ASJD"));
     }
 
     /**
@@ -37,6 +42,34 @@ public class GenericMethods {
             System.out.printf("%s ", t);
         System.out.println();
     }
+
+    /**
+     * This is a generic method that returns the maximum between general data
+     *
+     * Additional Information
+     * compareTo:
+     * returns a negative number if the object is less than the parameter
+     * returns a positive number if the object is more than the parameter
+     * returns 0 if the object is equals to the parameter
+     *
+     * @param a First generic parameter
+     * @param b Second generic parameter
+     * @param c Third generic parameter
+     * @param <T> Some generic type of data: <b>extends Comparable<T> means that the generic data type is restricted to classes that extends Comparable<T> </b>
+     * @return returns the maximum between a, b and c
+     */
+    private static <T extends Comparable<T>> T max(T a, T b, T c)
+    {
+        T max = a;
+
+        if (b.compareTo(a) > 0)
+            max = b;
+        if (c.compareTo(max) > 0)
+            max = c;
+
+        return max;
+    }
+
 
     @SuppressWarnings("unused")
     private static void printMe(Integer[] i)
