@@ -15,6 +15,9 @@ import java.util.Set;
 
 public class Sets {
 
+    /**
+     * Similar to a list, but constructing a HashSet removes every duplicate in the list used to create it
+     */
     public static void main(String[] args)
     {
         String[] things = {"apple", "BOB", "ham", "BOB", "bacon"};
