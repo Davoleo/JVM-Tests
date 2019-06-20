@@ -11,7 +11,7 @@ package altro.threads;
 public class MainThreads {
 
     /**
-     * Theards: Simultaneous operations
+     * Threads: Simultaneous operations
      */
     public static void main(String[] args)
     {
