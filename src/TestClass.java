@@ -92,6 +92,13 @@ public class TestClass {
         System.out.println("Data in input: " + data);
         System.out.println("Data in output: " + reverseData(data));
 
+        //Progressione aritmetica per il numero di esercizi di matematica
+        int n = 0;
+        while (n < 40)
+        {
+            System.out.println("Esercizio numero: " + (1 + 4 * n));
+            n++;
+        }
     }
 
     private static String reverseData(String data)
