@@ -1,4 +1,4 @@
-package altro;
+package data;
 
 /*************************************************
  * Author: Davoleo
