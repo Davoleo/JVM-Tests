@@ -1,6 +1,6 @@
 package oop.enumerazioni;
 
-import esercizi.Frazione;
+import oop.esercizi.Frazione;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +41,10 @@ public enum EnumOW {
         this.hero = hero;
     }
 
+    public Hero getHero() {
+        return hero;
+    }
+
     public List<Hero> getAllHeroes() {
         List<Hero> heroes = new ArrayList<>();
         for (EnumOW value : values()) {
@@ -49,6 +53,7 @@ public enum EnumOW {
         return heroes;
     }
 
+    //Example Use for Predicates (They allow you to execute a custom function that returns a boolean value to test something)
     public static void printHeroesWithPredicate(Predicate<Hero> tester) {
         for(EnumOW value : values()) {
             Hero hero = value.hero;

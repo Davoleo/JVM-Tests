@@ -1,11 +1,15 @@
 package oop;
 
-import esercizi.Frazione;
-import geometria.*;
+import oop.enumerazioni.EnumOW;
+import oop.esercizi.Frazione;
+import oop.geometria.*;
+import oop.interfacce.FunctionalInterfaces;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.Arrays;
 import java.util.Random;
+import java.util.function.Function;
 
 /*************************************************
  * Author: Davoleo
@@ -15,7 +19,7 @@ import java.util.Random;
  * Copyright - © - Davoleo - 2018
  **************************************************/
 
-public class Main {
+public class MainOOP {
     public static void main(String[] args){
 
 
@@ -181,6 +185,15 @@ public class Main {
             System.out.println("in un modo o nell'altro questo blocco di codice viene sempre eseguito");
         }
 
+        System.out.println("---------------------------------------------------------------------\n");
+
+        EnumOW.printHeroesWithPredicate(hero -> hero.realName().contains("Genji"));
+        System.out.println();
+
+        FunctionalInterfaces.processPersons(
+                Arrays.asList(EnumOW.values()),
+                hero -> hero.age() <= 25,
+                hero -> System.out.println(hero.toString()));
 
     }
 

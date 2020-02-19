@@ -1,8 +1,9 @@
 package oop.esercizi;
 
-import enumerazioni.EnumOW;
-import esercizi.Time;
-import esercizi.animals.*;
+import oop.enumerazioni.EnumOW;
+import oop.esercizi.animals.Animal;
+import oop.esercizi.animals.Dog;
+import oop.esercizi.animals.Fish;
 
 import java.util.EnumSet;
 
@@ -30,11 +31,11 @@ public class EsMain {
         System.out.println(bday);
 
         for(EnumOW hero : EnumOW.values())
-            System.out.println("Hero: " + hero + "\t\tName: " + hero.realName() + "\t\tAge: " + hero.age() + "\t\tLocation: " + hero.localize());
+            System.out.println("Hero: " + hero + "\t\tName: " + hero.getHero().realName() + "\t\tAge: " + hero.getHero().age() + "\t\tLocation: " + hero.getHero().localize());
 
         System.out.println("\nEnum Constant Range\n");
         for (EnumOW hero : EnumSet.range(EnumOW.Reinhardt, EnumOW.Wrecking_Ball))
-            System.out.println("Hero: " + hero + "\t\tName: " + hero.realName() + "\t\tAge: " + hero.age() + "\t\tLocation: " + hero.localize());
+            System.out.println("Hero: " + hero + "\t\tName: " + hero.getHero().realName() + "\t\tAge: " + hero.getHero().age() + "\t\tLocation: " + hero.getHero().localize());
 
         //--------------------------------
         //Animal test
