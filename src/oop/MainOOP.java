@@ -1,14 +1,16 @@
 package oop;
 
+import com.sun.org.apache.bcel.internal.generic.ARRAYLENGTH;
+import data.Array;
 import oop.enumerazioni.EnumOW;
+import oop.enumerazioni.Hero;
 import oop.esercizi.Frazione;
 import oop.geometria.*;
 import oop.interfacce.FunctionalInterfaces;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-import java.util.Arrays;
-import java.util.Random;
+import java.util.*;
 import java.util.function.Function;
 
 /*************************************************
@@ -194,6 +196,21 @@ public class MainOOP {
                 Arrays.asList(EnumOW.values()),
                 hero -> hero.age() <= 25,
                 hero -> System.out.println(hero.toString()));
+
+        EnumOW[] enumArray = EnumOW.values();
+        List<Hero> heroRoster = new ArrayList<>();
+        for (EnumOW enumOW : enumArray) {
+            heroRoster.add(enumOW.getHero());
+        }
+        /*
+        * Method Reference:
+        * Kind	Example
+        * Reference to a static method	ContainingClass::staticMethodName
+        * Reference to an instance method of a particular object	containingObject::instanceMethodName
+        * Reference to an instance method of an arbitrary object of a particular type	ContainingType::methodName
+        * Reference to a constructor	ClassName::new
+        */
+        heroRoster.sort(Hero::compareByAge);
 
     }
 
