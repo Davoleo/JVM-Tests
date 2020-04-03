@@ -10,9 +10,7 @@ package generics;
 
 import oop.geometria.Figure;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 //Generics allow to make general classes that can be later restricted to specific data types
 public class GenericsMain {
@@ -31,8 +29,51 @@ public class GenericsMain {
         //We should use "? extends SampleClass" for the parameterized type to accept all the objects of the subclasses of the specified class
         List<? extends Figure> polymorphicList = new ArrayList<>();
 
-        //Generic Methods
+        //Generic Methods -------------------------------------------
+        arrayToCollection(new Integer[] {1, 2, 3, 4, 5}, intList);
+
+        Object[] oa = new Object[100];
+        Collection<Object> co = new ArrayList<>();
+
+        // T inferred to be Object
+        arrayToCollection(oa, co);
+
+        String[] sa = new String[100];
+        Collection<String> cs = new ArrayList<>();
+
+        // T inferred to be String
+        arrayToCollection(sa, cs);
+
+        // T inferred to be Object
+        arrayToCollection(sa, co);
+
+        Integer[] ia = new Integer[100];
+        Float[] fa = new Float[100];
+        Number[] na = new Number[100];
+        Collection<Number> cn = new ArrayList<>();
+
+        // T inferred to be Number
+        arrayToCollection(ia, cn);
+
+        // T inferred to be Number
+        arrayToCollection(fa, cn);
+
+        // T inferred to be Number
+        arrayToCollection(na, cn);
+
+        // T inferred to be Object
+        arrayToCollection(na, co);
+
+        // compile-time error
+        //arrayToCollection(na, cs);
 
     }
 
+
+    @SuppressWarnings({"ManualArrayToCollectionCopy", "UseBulkOperation"})
+    public static <T> void arrayToCollection(T[] array, Collection<T> collection) {
+        for (T item: array) {
+            collection.add(item);
+        }
+    }
 }
