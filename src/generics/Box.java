@@ -12,6 +12,15 @@ package generics;
  * Example Generic Class
  * @param <O> The Class of the Object Key
  */
-public class ObjectKey<O> {
+public class Box<O> {
 
+    private O object;
+
+    public O getObject() {
+        return object;
+    }
+
+    public void setObject(O object) {
+        this.object = object;
+    }
 }
