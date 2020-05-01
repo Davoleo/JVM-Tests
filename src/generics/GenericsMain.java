@@ -8,6 +8,7 @@
 
 package generics;
 
+import javafx.util.Pair;
 import oop.geometria.Figure;
 
 import java.util.*;
@@ -69,6 +70,9 @@ public class GenericsMain {
 
     }
 
+    public static <K, V> boolean compare(Pair<K, V> pair1, Pair<K, V> pair2) {
+        return pair1.getKey().equals(pair2.getKey()) && pair1.getValue().equals(pair2.getValue());
+    }
 
     @SuppressWarnings({"ManualArrayToCollectionCopy", "UseBulkOperation"})
     public static <T> void arrayToCollection(T[] array, Collection<T> collection) {
