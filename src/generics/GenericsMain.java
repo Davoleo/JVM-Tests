@@ -68,6 +68,13 @@ public class GenericsMain {
         // compile-time error
         //arrayToCollection(na, cs);
 
+        Box<Integer> integerBox = new Box<>();
+        integerBox.setObject(10);
+        integerBox.inspect(1.7);
+
+        boolean is = isAnyGreater(new Integer[] {2, 4, 7, 8}, 9);
+        System.out.println("Is any Greater: " + is);
+
     }
 
     public static <K, V> boolean compare(Pair<K, V> pair1, Pair<K, V> pair2) {
@@ -79,5 +86,14 @@ public class GenericsMain {
         for (T item: array) {
             collection.add(item);
         }
+    }
+
+    public static <T extends Comparable<T>> boolean isAnyGreater(T[] array, T elem) {
+        for (T arrElem : array) {
+            if (arrElem.compareTo(elem) > 0)
+                return true;
+        }
+
+        return false;
     }
 }

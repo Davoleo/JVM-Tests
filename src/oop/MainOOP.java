@@ -210,7 +210,7 @@ public class MainOOP {
         * Reference to an instance method of an arbitrary object of a particular type	ContainingType::methodName
         * Reference to a constructor	ClassName::new
         */
-        heroRoster.sort(Hero::compareByAge);
+        heroRoster.sort(Hero::compareByName);
 
     }
 

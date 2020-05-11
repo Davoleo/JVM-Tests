@@ -23,4 +23,10 @@ public class Box<O> {
     public void setObject(O object) {
         this.object = object;
     }
+
+    //Bounded Type Params
+    public <N extends Number> void inspect(N n) {
+        System.out.println("T: " + object.getClass().getName());
+        System.out.println("N: " + n.getClass().getName());
+    }
 }
