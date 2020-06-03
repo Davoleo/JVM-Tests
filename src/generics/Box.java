@@ -8,6 +8,8 @@
 
 package generics;
 
+import java.util.List;
+
 /**
  * Example Generic Class
  * @param <O> The Class of the Object Key
@@ -28,5 +30,18 @@ public class Box<O> {
     public <N extends Number> void inspect(N n) {
         System.out.println("T: " + object.getClass().getName());
         System.out.println("N: " + n.getClass().getName());
+    }
+
+    public static <O> void addBox(O o, List<Box<O>> boxes) {
+        Box<O> box = new Box<>();
+        box.setObject(o);
+        boxes.add(box);
+    }
+
+    public static <O> void printBoxes(List<Box<O>> boxes) {
+        for (int i = 0; i < boxes.size(); i++) {
+            O boxContent = boxes.get(i).getObject();
+            System.out.println("Box #" + i + " contains [" + boxContent.toString() + "]");
+        }
     }
 }

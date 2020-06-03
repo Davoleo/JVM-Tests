@@ -8,10 +8,11 @@
 
 package generics;
 
-import javafx.util.Pair;
 import oop.geometria.Figure;
 
 import java.util.*;
+
+import static generics.GenericMethods.*;
 
 //Generics allow to make general classes that can be later restricted to specific data types
 public class GenericsMain {
@@ -75,25 +76,21 @@ public class GenericsMain {
         boolean is = isAnyGreater(new Integer[] {2, 4, 7, 8}, 9);
         System.out.println("Is any Greater: " + is);
 
+        List<Box<Integer>> listOfIntegerBoxes = new ArrayList<>();
+        Box.addBox(10, listOfIntegerBoxes);
+        Box.addBox(20, listOfIntegerBoxes);
+        Box.addBox(30, listOfIntegerBoxes);
+        Box.printBoxes(listOfIntegerBoxes);
+
+        List<Integer> integerList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
+        List<String> stringList = Arrays.asList("abc", "def", "ghi");
+
+        //Will print the sum of elements of this list
+        System.out.println("integerList Sum: " + sumOfList(integerList));
+
+        //Will print elements of this lists
+        printList(integerList);
+        printList(stringList);
     }
 
-    public static <K, V> boolean compare(Pair<K, V> pair1, Pair<K, V> pair2) {
-        return pair1.getKey().equals(pair2.getKey()) && pair1.getValue().equals(pair2.getValue());
-    }
-
-    @SuppressWarnings({"ManualArrayToCollectionCopy", "UseBulkOperation"})
-    public static <T> void arrayToCollection(T[] array, Collection<T> collection) {
-        for (T item: array) {
-            collection.add(item);
-        }
-    }
-
-    public static <T extends Comparable<T>> boolean isAnyGreater(T[] array, T elem) {
-        for (T arrElem : array) {
-            if (arrElem.compareTo(elem) > 0)
-                return true;
-        }
-
-        return false;
-    }
 }
