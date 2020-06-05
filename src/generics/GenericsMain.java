@@ -91,6 +91,9 @@ public class GenericsMain {
         //Will print elements of this lists
         printList(integerList);
         printList(stringList);
+
+        GenericMethods.addNums1to10(intList);
+        printList(intList);
     }
 
 }

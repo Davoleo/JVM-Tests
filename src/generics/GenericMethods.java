@@ -67,4 +67,15 @@ public class GenericMethods {
         }
         System.out.println();
     }
+
+    /**
+     * Sample method to showcase a use case for Lower Bounded Wildcards
+     * Adds numbers from 1 to 10 to a list
+     * @param list the list you want to add numbers into
+     */
+    public static void addNums1to10(List<? super Integer> list) {
+        for (int i = 1; i <= 10; i++) {
+            list.add(i);
+        }
+    }
 }
