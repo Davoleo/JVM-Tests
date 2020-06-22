@@ -1,6 +1,11 @@
 //Packages per importare i comandi
 //import java.lang.*;
 
+import esercizi.Chest;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class TestClass {
 
     /*************************************************
@@ -98,6 +103,20 @@ public class TestClass {
         {
             System.out.println("Esercizio numero: " + (1 + 4 * n));
             n++;
+        }
+
+        List<Chest> chestList = new ArrayList<>();
+        chestList.add(new Chest(567));
+        chestList.add(new Chest(333));
+
+        for (Chest chest : chestList) {
+            System.out.println("Chest Value: " + chest.getValue());
+        }
+
+        chestList.get(1).setValue(111);
+
+        for (Chest chest : chestList) {
+            System.out.println("Chest Value: " + chest.getValue());
         }
     }
 
