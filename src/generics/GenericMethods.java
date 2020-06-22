@@ -78,4 +78,19 @@ public class GenericMethods {
             list.add(i);
         }
     }
+
+    public static class WildcardError {
+
+        public void foo(List<?> i) {
+            //Compile error
+            //i.set(0, i.get(0));
+            //Works fine because generics make sure you're doing the right thing
+            fooHelper(i);
+        }
+
+        private <T> void fooHelper(List<T> l) {
+            l.set(0, l.get(0));
+        }
+
+    }
 }
