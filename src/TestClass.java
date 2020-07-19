@@ -1,7 +1,7 @@
 //Packages per importare i comandi
 //import java.lang.*;
 
-import esercizi.Chest;
+import model.Chest;
 
 import java.util.ArrayList;
 import java.util.List;

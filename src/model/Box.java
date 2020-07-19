@@ -6,7 +6,7 @@
  * Copyright - © - Davoleo - 2020
  * ----------------------------------- */
 
-package generics;
+package model;
 
 import java.util.List;
 

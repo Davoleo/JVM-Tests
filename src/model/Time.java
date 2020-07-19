@@ -1,4 +1,4 @@
-package esercizi;
+package model;
 
 public class Time {
 

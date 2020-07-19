@@ -8,6 +8,7 @@
 
 package generics;
 
+import model.Box;
 import oop.geometria.Figure;
 
 import java.util.*;

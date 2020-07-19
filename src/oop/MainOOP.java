@@ -1,7 +1,5 @@
 package oop;
 
-import com.sun.org.apache.bcel.internal.generic.ARRAYLENGTH;
-import data.Array;
 import oop.enumerazioni.EnumOW;
 import oop.enumerazioni.Hero;
 import oop.esercizi.Frazione;
@@ -11,7 +9,6 @@ import oop.interfacce.FunctionalInterfaces;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.*;
-import java.util.function.Function;
 
 /*************************************************
  * Author: Davoleo

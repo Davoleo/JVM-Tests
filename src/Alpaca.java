@@ -1,4 +1,4 @@
-import esercizi.Time;
+import model.Time;
 
 import java.util.Scanner;
 

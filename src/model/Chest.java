@@ -6,7 +6,7 @@
  * Copyright - © - Davoleo - 2020
  * ----------------------------------- */
 
-package esercizi;
+package model;
 
 public class Chest {
 
