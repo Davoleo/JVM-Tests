@@ -14,6 +14,7 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Lambda {
@@ -46,6 +47,24 @@ public class Lambda {
                 person -> person.getGender() == Person.Sex.MALE && person.getAge() >= 18 && person.getAge() <= 25,
                 Person::print
         );
+        System.out.println("------------------------------------------------------------");
+        processPeopleWithFunction(people,
+                person -> person.getGender() == Person.Sex.MALE && person.getAge() >= 18 && person.getAge() <= 25,
+                Person::getEmail,
+                System.out::println);
+        System.out.println("------------------------------------------------------------");
+
+        //Aggregate operations to do the same thing
+        people.stream()
+                .filter(person -> person.getGender() == Person.Sex.MALE && person.getAge() >= 18 && person.getAge() <= 25)
+                .map(Person::getEmail)
+                .forEach(System.out::println);
+
+        people.stream()
+                .filter(person -> person.getGender() == Person.Sex.MALE)
+                .mapToInt(Person::getAge)
+                .average()
+                .getAsDouble();
     }
 
     private static void printPeopleOlderThan(List<Person> people, int age) {
@@ -80,5 +99,24 @@ public class Lambda {
         }
     }
 
+    //Function to take the people members and perform some operations in the consumer
+    private static void processPeopleWithFunction(List<Person> people, Predicate<Person> test,
+                                                  Function<Person, String> mapper, Consumer<String> consumer) {
+        for (Person person : people) {
+            if (test.test(person)) {
+                String data = mapper.apply(person);
+                consumer.accept(data);
+            }
+        }
+    }
 
+    //Generic Data approach
+    private static <X, Y> void processElements(Iterable<X> source, Predicate<X> tester, Function<X, Y> mapper, Consumer<Y> consumer) {
+        for (X elem : source) {
+            if (tester.test(elem)) {
+                Y data = mapper.apply(elem);
+                consumer.accept(data);
+            }
+        }
+    }
 }
