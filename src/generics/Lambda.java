@@ -13,9 +13,11 @@ import model.Person;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class Lambda {
 
@@ -65,6 +67,39 @@ public class Lambda {
                 .mapToInt(Person::getAge)
                 .average()
                 .getAsDouble();
+
+        //The first param of the general purpose reduction method (reduce) is the identity (the initial value)
+        //the second param is the accumulator which is a function that takes 2 paramaters and outputs one is used to make partial results
+        // and is called for every item in the stream
+        people.stream()
+                .map(Person::getAge)
+                .reduce(0, Integer::sum);
+
+        //Collects all items of a stream inside of an object
+        Averager collection = people.stream()
+                .filter(person -> person.getGender() == Person.Sex.MALE)
+                .map(Person::getAge)
+                .collect(Averager::new, Averager::accept, Averager::combine);
+        System.out.println("Average age of male Members: " + collection.average());
+
+        //Easy to use with collections
+        List<String> namesOfFemaleMembers = people.stream()
+                .filter(person -> person.getGender() == Person.Sex.FEMALE)
+                .map(Person::getName)
+                .collect(Collectors.toList());
+
+        Map<Person.Sex, List<String>> namesByGender = people.stream()
+                .collect(
+                        Collectors.groupingBy(Person::getGender,
+                                Collectors.mapping(Person::getName, Collectors.toList())));
+
+        Map<Person.Sex, Integer> totalAgeByGender = people.stream()
+                .collect(Collectors.groupingBy(
+                        Person::getGender,
+                        Collectors.reducing(
+                                0, Person::getAge, Integer::sum
+                        )));
+
     }
 
     private static void printPeopleOlderThan(List<Person> people, int age) {
