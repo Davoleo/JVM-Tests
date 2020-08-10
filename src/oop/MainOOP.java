@@ -8,7 +8,10 @@ import oop.interfacce.FunctionalInterfaces;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
 /*************************************************
  * Author: Davoleo
@@ -201,24 +204,24 @@ public class MainOOP {
         }
         /*
         * Method Reference:
-        * Kind	Example
-        * Reference to a static method	ContainingClass::staticMethodName
-        * Reference to an instance method of a particular object	containingObject::instanceMethodName
-        * Reference to an instance method of an arbitrary object of a particular type	ContainingType::methodName
-        * Reference to a constructor	ClassName::new
-        */
+         * Kind	Example
+         * Reference to a static method	ContainingClass::staticMethodName
+         * Reference to an instance method of a particular object	containingObject::instanceMethodName
+         * Reference to an instance method of an arbitrary object of a particular type	ContainingType::methodName
+         * Reference to a constructor	ClassName::new
+         */
         heroRoster.sort(Hero::compareByName);
 
     }
 
-    private static int metodoIntermedio(int[] v, int diQuanti)
-    {
-        try
-        {
+    /**
+     * @deprecated Explanation why this method is deprecated
+     */
+    @Deprecated
+    private static int metodoIntermedio(int[] v, int diQuanti) {
+        try {
             return mediaInteraVett(v, diQuanti);
-        }
-        catch(ArithmeticException errore)
-        {
+        } catch (ArithmeticException errore) {
             return -1111111111;
         }
     }

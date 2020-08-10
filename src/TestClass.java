@@ -2,10 +2,18 @@
 //import java.lang.*;
 
 import model.Chest;
+import oop.interfacce.ClassHeader;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@ClassHeader(
+        author = "Davoleo",
+        date = "24/4/2018",
+        currentRevision = 2,
+        lastModified = "10/08/2020",
+        lastModifiedBy = "Davoleo",
+        reviewers = {"Davoleo"})
 public class TestClass {
 
     /*************************************************
@@ -45,7 +53,7 @@ public class TestClass {
         float f1 = 3.12345678F;
 
         System.out.println(Float.MAX_VALUE);
-                        //Classe Float
+        //Classe Float
 
         //Double: 8 bytes, (64 bits) virgola mobile doppia precisione
         double d1 = 3.12345678;
@@ -76,14 +84,12 @@ public class TestClass {
         System.out.println(superatoControllo);
 
 
-
-            int                  variabile               =                  0;
+        int                  variabile               =                  0;
         //  tipo                 identificatore         diventa             valore
 
 
         int esa = 0xA2;     //numero esadecimale inizializzato dal 0x
         int ott = 0712;     //numero ottale
-
 
 
         double percentualeInteresse = 2.5;  //percentuale interesse annuale
@@ -99,8 +105,7 @@ public class TestClass {
 
         //Progressione aritmetica per il numero di esercizi di matematica
         int n = 0;
-        while (n < 40)
-        {
+        while (n < 40) {
             System.out.println("Esercizio numero: " + (1 + 4 * n));
             n++;
         }
@@ -120,8 +125,7 @@ public class TestClass {
         }
     }
 
-    private static String reverseData(String data)
-    {
+    private static String reverseData(String data) {
         int dd = Integer.parseInt(data.substring(0, 2));
         int mm = Integer.parseInt(data.substring(3, 5));
         int yyyy = Integer.parseInt(data.substring(6, 10));

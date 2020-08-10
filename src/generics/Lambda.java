@@ -25,16 +25,16 @@ public class Lambda {
 
         List<Person> people = Arrays.asList(
                 new Person("Flavia", LocalDate.of(1990, 3, 11), Person.Sex.FEMALE, "in@idrisus.ca"),
-                new Person("Doris", LocalDate.of(1980, 11, 1), Person.Sex.FEMALE, "at.magnis.dis@tellus.org"),
-                new Person("Xavier", LocalDate.of(1985, 5, 8), Person.Sex.FEMALE, "ullamcorper@duissit.co.uk"),
+                new Person("Doris", LocalDate.of(1980, 11, 1), Person.Sex.MALE, "at.magnis.dis@tellus.org"),
+                new Person("Xavier", LocalDate.of(1985, 5, 8), Person.Sex.MALE, "ullamcorper@duissit.co.uk"),
                 new Person("Alfreda", LocalDate.of(1986, 4, 14), Person.Sex.FEMALE, "tellus@pedesuspendissedui.edu"),
                 new Person("Rashad", LocalDate.of(1989, 4, 17), Person.Sex.FEMALE, "dignissim.lacus@enimconsequat.com"),
-                new Person("Neville", LocalDate.of(1998, 3, 11), Person.Sex.FEMALE, "orci.tincidunt@loremac.net"),
-                new Person("Connor", LocalDate.of(1978, 11, 6), Person.Sex.FEMALE, "rutrum.justo@ultrices.org"),
+                new Person("Neville", LocalDate.of(1998, 3, 11), Person.Sex.MALE, "orci.tincidunt@loremac.net"),
+                new Person("Connor", LocalDate.of(1978, 11, 6), Person.Sex.MALE, "rutrum.justo@ultrices.org"),
                 new Person("Charity", LocalDate.of(1997, 10, 7), Person.Sex.FEMALE, "at.risus@cursusNuncmauris.org"),
-                new Person("Dylan", LocalDate.of(1995, 5, 23), Person.Sex.FEMALE, "nullam.lobortis@dignissim.co.uk"),
+                new Person("Dylan", LocalDate.of(1995, 5, 23), Person.Sex.MALE, "nullam.lobortis@dignissim.co.uk"),
                 new Person("Chava", LocalDate.of(1962, 7, 6), Person.Sex.FEMALE, "nulla@nuncacmattis.ca"),
-                new Person("Merrill", LocalDate.of(1993, 5, 8), Person.Sex.FEMALE, "mi@faucibuslectus.com"),
+                new Person("Merrill", LocalDate.of(1993, 5, 8), Person.Sex.MALE, "mi@faucibuslectus.com"),
                 new Person("Keelie", LocalDate.of(1985, 5, 3), Person.Sex.FEMALE, "arcu@pretium.co.uk")
         );
 
