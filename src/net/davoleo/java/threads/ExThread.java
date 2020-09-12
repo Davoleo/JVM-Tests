@@ -1,14 +1,13 @@
-package net.davoleo.java.altro.threads;
-
-import java.util.Random;
-
-/*************************************************
+/*-------------------------------------
  * Author: Davoleo
  * Date / Hour: 21/02/2019 / 23:07
  * Class: ExThread
- * Project: JavaBase
- * Copyright - © - Davoleo - 2019
- **************************************************/
+ * Project: JVM Tests
+ *-------------------------------------*/
+
+package net.davoleo.java.threads;
+
+import java.util.Random;
 
 public class ExThread implements Runnable {
 
@@ -16,8 +15,7 @@ public class ExThread implements Runnable {
     int time;
     Random r = new Random();
 
-    public ExThread(String s)
-    {
+    public ExThread(String s) {
         name = s;
         time = r.nextInt(999);
     }

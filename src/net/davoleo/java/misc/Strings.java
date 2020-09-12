@@ -1,4 +1,4 @@
-package net.davoleo.java.altro;
+package net.davoleo.java.misc;
 
 /*************************************************
  * Author: Davoleo
