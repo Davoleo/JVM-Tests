@@ -1,19 +1,18 @@
-package net.davoleo.java.collections;
-
-import java.util.*;
-
-/*************************************************
+/*----------------------------------------
  * Author: Davoleo
  * Date / Hour: 05/02/2019 / 15:27
  * Class: CollectionTests
  * Project: JavaBase
  * Copyright - © - Davoleo - 2019
- **************************************************/
+ *----------------------------------------*/
+
+package net.davoleo.java.collections;
+
+import java.util.*;
 
 public class CollectionTests {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         //---------------------------------------------------------------------------------------------------
         //ArrayLists
         //Array and list v1 initialization

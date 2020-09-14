@@ -1,18 +1,17 @@
-package net.davoleo.java.collections;
-
-/*************************************************
+/*-----------------------------------------------
  * Author: Davoleo
  * Date / Hour: 14/02/2019 / 16:00
  * Class: GenericMethods
  * Project: JavaBase
  * Copyright - © - Davoleo - 2019
- **************************************************/
+ *-----------------------------------------------*/
+
+package net.davoleo.java.collections;
 
 public class GenericMethods {
 
-    public static void main(String[] args)
-    {
-        Integer[] iray = {1,2,3,4};
+    public static void main(String[] args) {
+        Integer[] iray = {1, 2, 3, 4};
         Character[] cray = {'b', 'u', 'c', 'y'};
 
         printMeGeneric(iray);
@@ -70,8 +69,6 @@ public class GenericMethods {
         return max;
     }
 
-
-    @SuppressWarnings("unused")
     private static void printMe(Integer[] i)
     {
         for (int x : i)
@@ -79,7 +76,6 @@ public class GenericMethods {
         System.out.println();
     }
 
-    @SuppressWarnings("unused")
     private static void printMe(Character[] i)
     {
         for (char x : i)

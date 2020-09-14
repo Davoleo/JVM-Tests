@@ -1,14 +1,14 @@
-package net.davoleo.java.collections;
-
-import java.util.Stack;
-
-/*************************************************
+/*---------------------------------------------
  * Author: Davoleo
  * Date / Hour: 13/02/2019 / 17:32
  * Class: Stacks
  * Project: JavaBase
  * Copyright - © - Davoleo - 2019
- **************************************************/
+ *---------------------------------------------*/
+
+package net.davoleo.java.collections;
+
+import java.util.Stack;
 
 public class Stacks {
 

@@ -1,14 +1,14 @@
-package net.davoleo.java.collections;
-
-import java.util.PriorityQueue;
-
-/*************************************************
+/*-----------------------------------------
  * Author: Davoleo
  * Date / Hour: 13/02/2019 / 17:46
  * Class: Queues
  * Project: JavaBase
  * Copyright - © - Davoleo - 2019
- **************************************************/
+ **-----------------------------------------*/
+
+package net.davoleo.java.collections;
+
+import java.util.PriorityQueue;
 
 public class Queues {
 

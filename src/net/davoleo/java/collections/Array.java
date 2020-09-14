@@ -1,57 +1,57 @@
-package net.davoleo.java.collections;
+/*-------------------------------------
+ * Author: Davoleo
+ * Date: 14/6/18
+ * Hour: 01:00
+ * Copyright - © - Davoleo - 2018
+ *-------------------------------------*/
 
-import java.util.Random;
+package net.davoleo.java.collections;
 
 public class Array {
 
-    /*************************************************
-     * Author: Davoleo
-     * Date: 14/6/18
-     * Hour: 01:00
-     * Copyright - © - Davoleo - 2018
-     **************************************************/
+    public static void main(String[] args) {
+        //It's not a primitive type (like String)
+        //it's like an immutable indexed list of cells that can contain data
+        //one-dimensional arrays are also called "vectors"
+        //If you try to access either a negative or an index >= to the length of the array an
+        //ArrayOutOfBoundsException is thrown
+        //Arrays are 0 indexed which means that the index of the first element is 0
+        //and the index of the last element is = to the length of the array - 1
 
-    public static void main (String [] args)
-    {
-     //non si tratta di un tipo primitivo (situazione simile alle String)
-        //elenco di cellette più o meno lungo nel quale si possono memorizzare dei dati detti elementi
-        //gli array monodimensionali sono detti anche vettori
-        //Mai andare oltre il limite degli array poiché non c'è un blocco e da errore:
-        //ArrayOutOfBoundsException
+        double total = 0;
+        //Creates a new array with 30 empty spaces
+        double[] dailyProfit = new double[30];
 
-
-        Random r = new Random();
-        double totaleIncassi = 0;
-        double[] incassiGiornalieri = new double [30];
-
-        for (int giorno = 0; giorno<30; giorno++)
-        {
-            System.out.print("Inserire l'incasso per il giorno "+giorno+ ": ");
-            incassiGiornalieri[giorno] = r.nextDouble()*10000;
-            System.out.println(incassiGiornalieri[giorno]);
-            totaleIncassi+=incassiGiornalieri[giorno];
+        //Looping over the length of the array
+        for (int day = 0; day < dailyProfit.length; day++) {
+            System.out.print("Writing Day " + day + "profit : ");
+            dailyProfit[day] = Math.random() * 10000;
+            System.out.println(dailyProfit[day]);
+            total += dailyProfit[day];
         }
-        double mediaIncassi = totaleIncassi/30;
-        System.out.println("\nIncasso medio giornaliero: "+mediaIncassi);
 
-        for(int giorno = 0; giorno<30; giorno ++)   //scannerizza tutte le celle dell'array
-        if(incassiGiornalieri[giorno] < mediaIncassi)
-            System.out.println("Il giorno " + (giorno+1) + " del mese l'incasso " + "(" + incassiGiornalieri[giorno]+") risulta " + "inferiore alla media");
+        double averageProfit = total / 30;
+        System.out.println("\nAverage Daily Profit: " + averageProfit);
 
-        String[] giorniSettimana = {"Lunedì", "Martedì", "Mercoledì", "Giovedì","Venerdì","Sabato","Domenica"};
+        for (int day = 0; day < dailyProfit.length; day++) {
+            if (dailyProfit[day] < averageProfit) {
+                System.out.println("Il day " + (day + 1) + " del mese l'incasso " + "(" + dailyProfit[day] + ") risulta " + "inferiore alla media");
+            }
+        }
 
+        //Literal Array Initialization (creates an array of the needed length while also populating it with data)
+        String[] giorniSettimana = {"Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"};
 
-        int array[]={3,4,5,6,7,8};
+        int[] array = {3, 4, 5, 6, 7, 8};
         add5(array);
-        for(int y : array)
-            System.out.println();
 
+        for (int y : array)
+            System.out.println(y);
     }
 
-    private static void add5(int x[])
-    {
-        for(int i=0; i<x.length; i++)
-            x[i]+=5;
+    private static void add5(int[] x) {
+        for (int i = 0; i < x.length; i++)
+            x[i] += 5;
     }
 
 }
