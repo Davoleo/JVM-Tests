@@ -1,21 +1,20 @@
+/*---------------------------------------------
+ * Author: Davoleo
+ * Date / Hour: 25/01/2019 / 17:23
+ * Class: FileMain
+ * Project: JavaBase
+ * Copyright - © - Davoleo - 2018
+ *---------------------------------------------*/
+
 package net.davoleo.java.files;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Formatter;
 
-/*************************************************
- * Author: Davoleo
- * Date / Hour: 25/01/2019 / 17:23
- * Class: FileMain
- * Project: JavaBase
- * Copyright - © - Davoleo - 2018
- **************************************************/
-
 public class FileMain {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         //File Info, does it exist?
         File x = new File("asdf.txt");
 
@@ -29,13 +28,10 @@ public class FileMain {
 
         final Formatter formatter;
 
-        try
-        {
+        try {
             formatter = new Formatter("asdf.txt");
             System.out.println("you created a file!");
-        }
-        catch (FileNotFoundException e)
-        {
+        } catch (FileNotFoundException e) {
             System.out.println("Error while creating the file!");
         }
 
@@ -54,10 +50,5 @@ public class FileMain {
         file2.openFile();
         file2.readFile();
         file2.closeFile();
-
-
     }
-
-
-
 }
