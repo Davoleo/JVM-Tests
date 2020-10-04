@@ -8,21 +8,24 @@ package net.davoleo.java.oop.esercizi;
  * Copyright - © - Davoleo - 2018
  **************************************************/
 
-@SuppressWarnings({"unused", "WeakerAccess"})
+@SuppressWarnings("WeakerAccess")
 public class Time {
 
-    private int hh;
-    private int mm;
-    private int ss;
+    private final int hh;
+    private final int mm;
+    private final int ss;
 
-    public Time()
-    { this(0,0,0); }
+    public Time() {
+        this(0, 0, 0);
+    }
 
-    public Time(int hh)
-    { this(hh, 0, 0); }
+    public Time(int hh) {
+        this(hh, 0, 0);
+    }
 
-    public Time(int hh, int mm)
-    { this(hh, mm, 0); }
+    public Time(int hh, int mm) {
+        this(hh, mm, 0);
+    }
 
     public Time(int hh, int mm, int ss)
     {

@@ -1,6 +1,6 @@
 package net.davoleo.java.oop.esercizi;
 
-import net.davoleo.java.oop.enumerazioni.EnumOW;
+import net.davoleo.java.oop.enums.EnumOW;
 import net.davoleo.java.oop.esercizi.animals.Animal;
 import net.davoleo.java.oop.esercizi.animals.Dog;
 import net.davoleo.java.oop.esercizi.animals.Fish;

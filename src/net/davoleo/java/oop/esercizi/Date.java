@@ -10,12 +10,11 @@ package net.davoleo.java.oop.esercizi;
 
 public class Date {
 
-    private int day;
-    private int month;
-    private int year;
+    private final int day;
+    private final int month;
+    private final int year;
 
-    public Date(int d, int m, int y)
-    {
+    public Date(int d, int m, int y) {
         day = d;
         month = m;
         year = y;

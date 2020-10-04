@@ -9,7 +9,7 @@
 package net.davoleo.java.generics;
 
 import net.davoleo.java.model.Box;
-import net.davoleo.java.oop.geometria.Figure;
+import net.davoleo.java.oop.shapes.Shape;
 
 import java.util.*;
 
@@ -30,7 +30,7 @@ public class GenericsMain {
         List<?> unknownList = new ArrayList<>();
 
         //We should use "? extends SampleClass" for the parameterized type to accept all the objects of the subclasses of the specified class
-        List<? extends Figure> polymorphicList = new ArrayList<>();
+        List<? extends Shape> polymorphicList = new ArrayList<>();
 
         //Generic Methods -------------------------------------------
         arrayToCollection(new Integer[] {1, 2, 3, 4, 5}, intList);

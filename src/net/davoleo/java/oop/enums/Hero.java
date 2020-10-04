@@ -6,7 +6,7 @@
  * Copyright - © - Davoleo - 2019
  * ----------------------------------- */
 
-package net.davoleo.java.oop.enumerazioni;
+package net.davoleo.java.oop.enums;
 
 public class Hero {
 

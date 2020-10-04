@@ -10,18 +10,16 @@ package net.davoleo.java.oop.esercizi;
 
 public class BirthDate {
 
-    private String name;
-    private Date birthDate;
+    private final String name;
+    private final Date birthDate;
 
-    BirthDate(String name, Date birthDate)
-    {
+    BirthDate(String name, Date birthDate) {
         this.name = name;
         this.birthDate = birthDate;
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return String.format("My name is: %s, I was born on %s", name, birthDate);
     }
 }

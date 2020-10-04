@@ -1,6 +1,6 @@
-package net.davoleo.java.oop.enumerazioni;
+package net.davoleo.java.oop.enums;
 
-import net.davoleo.java.oop.esercizi.Frazione;
+import net.davoleo.java.oop.esercizi.Fraction;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ public enum EnumOW {
 
     //Tanks
     DVA(new Hero("Hana Song", 19, Hero.Sex.FEMALE, "Busan, South Korea")),
-    Orisa(new Hero("Orisa", new Frazione(1, 12).getResult(), Hero.Sex.FEMALE, "Numbani")),
+    Orisa(new Hero("Orisa", new Fraction(1, 12).getResult(), Hero.Sex.FEMALE, "Numbani")),
     Reinhardt(new Hero("Reinhardt Wilhelm", 61, Hero.Sex.MALE, "Stuttgart, Germany")),
     Roadhog(new Hero("Mako Rutledge", 48, Hero.Sex.MALE, "Junkertown, Australia")),
     Winston(new Hero("Winston", 29, Hero.Sex.MALE, "Horizon Lunar Colony")),

@@ -1,10 +1,10 @@
 package net.davoleo.java.oop;
 
-import net.davoleo.java.oop.enumerazioni.EnumOW;
-import net.davoleo.java.oop.enumerazioni.Hero;
-import net.davoleo.java.oop.esercizi.Frazione;
-import net.davoleo.java.oop.geometria.*;
+import net.davoleo.java.oop.enums.EnumOW;
+import net.davoleo.java.oop.enums.Hero;
+import net.davoleo.java.oop.esercizi.Fraction;
 import net.davoleo.java.oop.interfacce.FunctionalInterfaces;
+import net.davoleo.java.oop.shapes.*;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -22,169 +22,162 @@ import java.util.Random;
  **************************************************/
 
 public class MainOOP {
-    public static void main(String[] args){
-
-
+    public static void main(String[] args) {
         //------------------------------------------------------------------------------------------------
         //POINTS
 
-        Punto p1;           //Dichiarazione di un oggetto   come le variabili    SOLO COME RIFERIMENTO
-        p1 = new Punto(10, 10);   //metodo costruttore    per crearlo, nella RAM
+        //Declaring an object
+        //Yyou can only declare objects as references to objects
+        Point p1;
+        p1 = new Point(10, 10);   //Constructor method to initialize the object
 
-        //p1.x = 123;      NO! SONO VARIABILI PRIVATE!
+        //p1.x = 123;      You can't edit internal variables directly
         //p1.y = -67;
 
         p1.setX(900);
         p1.setY(1000);
-
         System.out.println("x: " + p1.getX() + " | y: " + p1.getY());
 
-        Punto p2;
-        p2 = new Punto(23,-10);
-
+        Point p2;
+        p2 = new Point(23, -10);
         System.out.println(p2);
 
         System.out.println("-------------------------------------------------------------------");
         //-------------------------------------------------------------------------------------
         //FRACTIONS
 
-        System.out.println("Il punto si trova nel quadrante n. " + p1.LocalizzaQuadrante());
+        System.out.println("The point is in the: " + p1.getQuarter() + " quarter.");
 
-        Frazione f1, f2, f3, f4;
+        Fraction f1, f2, f3, f4;
 
-        f1 = new Frazione(1,7);
-        System.out.println("La frazione f1 è: " + f1.ftoString());
+        f1 = new Fraction(1, 7);
+        System.out.println("f1 is: " + f1);
 
-        f2 = new Frazione(7);
-        System.out.println("La frazione f2 è: " + f2.ftoString());
-        System.out.println("Il numeratore di f2 è: " + f2.getN());
-        System.out.println("Il denominatore di f2 è: " + f2.getD());
+        f2 = new Fraction(7);
+        System.out.println("f2 is: " + f2);
+        System.out.println("f2's Numerator is: " + f2.getNumerator());
+        System.out.println("f2's Denominator is: " + f2.getDenominator());
 
-        f3 = new Frazione("23/53");
-        System.out.println("La frazione f3 è: " + f3.ftoString());
-        System.out.println("Il risultato di f3 è: " + f3.getResult());
+        f3 = new Fraction("23/53");
+        System.out.println("f3 is: " + f3);
+        System.out.println("f3 results: " + f3.getResult());
 
-        f4 = new Frazione("1/2");
-        Frazione fsomma = f4.Somma(new Frazione ("1/3"));
-        System.out.println("La somma tra 1/2 e 1/3 è: " + fsomma.ftoString());
+        f4 = new Fraction("1/2");
+        Fraction fsomma = f4.sum(new Fraction("1/3"));
+        System.out.println("The sum of 1/2 and 1/3 is: " + fsomma);
 
         System.out.println("-------------------------------------------------------------------");
         //--------------------------------------------------------------------------------------------------------------------
         //Static members
-        //Non sono legati alla creazione di un oggetto
-        //Quindi condivisi tra tutti gli oggetti dello stesso tipo
+        //They're not linked to a specific object
+        //They're shared between all objects of the class
 
         Random r = new Random();
 
-        //Per diecimila volte genera un numero randomico da uno a 10 e ogni volta che questo numero è = a 5 crea un punto
-        for(int i=0; i<10000; i++)
-            if (r.nextInt(10)== 5)
-                new Punto();
+        //it generates a random number between 1 and 9 - 10000 times and every time the number is equals to 5 it creates a point
+        for (int i = 0; i < 10000; i++)
+            if (r.nextInt(10) == 5)
+                new Point();
 
-        System.out.println("Sono stati creati " + Punto.getConta() + " punti");
-        //getConta è un metodo STATIC, detto anche di classe, poiché non viene effettuato su di un oggetto ma deriva direttamente dalla classe
+        System.out.println(Point.getCount() + " points were created.");
+        //getCount is a STATIC method
 
-        //Molte classi di servizio contengono metodi statici come la classe Math
-        double areaCerchio = Math.PI * Math.pow(27.2,2);
-        System.out.println("Area del cerchio: " + areaCerchio);
+        //Many utility classes contain Static methods like the Math class
+        double circleArea = Math.PI * Math.pow(27.2, 2);
+        System.out.println("The area of the circle is " + circleArea);
 
-        Punto pA = new Punto(0, 2);
-        Punto pB = new Punto(3, 7);
-        System.out.println("La distanza tra i due punti è di: " + Punto.distance(pA, pB));
+        Point pA = new Point(0, 2);
+        Point pB = new Point(3, 7);
+        System.out.println("Distance between pA and pB: " + Point.distance(pA, pB));
 
-
-        System.out.println("-------------------------------------------------------------------");
-        //-------------------------------------------------------------------------------------------------------------------
-        //Segmenti - Composizione di classi
-
-        Segmento s = new Segmento(12,1,2,13);
-
-        System.out.println("La lunghezza del segmento s è di: " + s.lunghezza());
 
         System.out.println("-------------------------------------------------------------------");
         //-------------------------------------------------------------------------------------------------------------------
-        //Rettangoli - Composizione di classi
+        //Segments - Compound classes
 
-        Rettangolo rettangolo = new Rettangolo(100, 50, 30, 10);
-        System.out.println("La lunghezza del perimetro del rettangolo è: " + rettangolo.perimetro());
-        System.out.println("Il valore dell'area del rettangolo è: " + rettangolo.area());
+        Segment segment = new Segment(12, 1, 2, 13);
+
+        System.out.println("Length of the segment: " + segment.length());
+
+        System.out.println("-------------------------------------------------------------------");
+        //-------------------------------------------------------------------------------------------------------------------
+        //Rectangles - Compound classes
+
+        Rectangle rectangle = new Rectangle(100, 50, 30, 10);
+        System.out.println("Rectangle Perimeter: " + rectangle.perimeter());
+        System.out.println("Rectangle's Area: " + rectangle.area());
 
         System.out.println("---------------------------------------------------------------------");
         //-----------------------------------------------------------------------------------------------------------------
-        //Quadrati - EREDITARIETA' PARTE 1
+        //Squares - Inheritance
 
-        //Va a richiamare automaticamente il metodo vuoto del rettangolo
-        Quadrato q = new Quadrato(1,1,3);
-        System.out.println("La lunghezza del perimetro del quadrato è: " + q.perimetro());
-        System.out.println("Il valore dell'area del quadrato è: " + q.area());
+        Square square = new Square(1, 1, 3);
+        System.out.println("Length of the perimeter of the square: " + square.perimeter());
+        System.out.println("Area of the square: " + square.area());
 
         System.out.println("---------------------------------------------------------------------");
         //-----------------------------------------------------------------------------------------------------------------
         //Cerchi
-        Cerchio c = new Cerchio(0,0,5);
-        System.out.println("La lunghezza del perimetro del cerchio è: " + c.perimetro());
-        System.out.println("Il valore dell'area del quadrato è: " + c.area());
+        Circle circle = new Circle(0, 0, 5);
+        System.out.println("Circle's Perimeter: " + circle.perimeter());
+        System.out.println("Circles's Area: " + circle.area());
 
         System.out.println("---------------------------------------------------------------------");
         //-----------------------------------------------------------------------------------------------------------------
-        //Conformità di tipo | late binding | polimorfismo
-        //Le figure madri possono conservare informazioni che possono contenere anche le classi figlie
-        //Questa compatibilità/tolleranza è detta CONFORMITA' DI TIPO
-        Figure f = new Quadrato(10,40,100);
-        f.perimetro();
+        //Polymorphism
+        //Shape objects can contain information of the children classes
+        //This compatibility is called Polymorphism
+        Shape f = new Square(10, 40, 100);
+        f.perimeter();
 
-        Figure[] disegno = new Figure[1000];
+        Shape[] canvas = new Shape[1000];
 
-        disegno[0] = new Quadrato(30,30,40);
-        disegno[1] = new Quadrato(30,10,50);
-        disegno[2] = new Cerchio(100,100,70);
-        disegno[3] = new Rettangolo(15,10, 150,80);
-        disegno[4] = new Quadrato(30,100,80);
+        canvas[0] = new Square(30, 30, 40);
+        canvas[1] = new Square(30, 10, 50);
+        canvas[2] = new Circle(100, 100, 70);
+        canvas[3] = new Rectangle(15, 10, 150, 80);
+        canvas[4] = new Square(30, 100, 80);
 
-        int numeroFigure = 5;
-        double totPerimetri = 0;
+        int shapesCount = 5;
+        double totalLength = 0;
 
-        disegno[0].perimetro();
+        canvas[0].perimeter();
 
-        for (int i=0; i<numeroFigure;i++)
-            totPerimetri+=disegno[i].perimetro();
+        for (int i = 0; i < shapesCount; i++)
+            totalLength += canvas[i].perimeter();
 
-        System.out.println(totPerimetri);
+        System.out.println(totalLength);
 
         //late binding / dynamic binding
-        //si contrappone a
+        //in contrast to
         //early binding / static binding
-        //late binding è il momento in cui un programma in runtime sceglie il metodo da utilizzare
+        //late binding is when the program at runtime chooses which perimeter method to call depending on the object type
 
         System.out.println("---------------------------------------------------------------------\n");
         //-----------------------------------------------------------------------------------------------------------------
-        //Eccezioni
-        int diQuanti = 0;
-        int[] vettore = {3,8,-78,19,56,0,41,88,12,13,14,90};
-        try{
-            System.out.println("Media: " + metodoIntermedio(vettore, diQuanti));
-        }
-        catch(IllegalArgumentException eccezione)
-        {
-            System.out.println("Argomento Illegale ;)");
-        }
+        //Exceptions
+        int numberOfItems = 0;
+        int[] vector = {3, 8, -78, 19, 56, 0, 41, 88, 12, 13, 14, 90};
 
+        try {
+            System.out.println("Average: " + intermediateMethod(vector, numberOfItems));
+        } catch (IllegalArgumentException exception) {
+            System.out.println("Illegal Argument ;)");
+        }
         //----
-
 
         try
         {
-            @SuppressWarnings("unused")
-            PrintWriter backup = new PrintWriter("z:\\nonEsisto.txt");
+            PrintWriter backup = new PrintWriter("z:\\IDoNotExist.txt");
         }
         catch(FileNotFoundException e)
         {
             //e.printStackTrace();
-            System.out.println("Il file per il backup non può essere creato");
+            System.out.println("The backup file can't be created");
         }
         finally
         {
-            System.out.println("in un modo o nell'altro questo blocco di codice viene sempre eseguito");
+            System.out.println("Whether the exception is thrown or not this method is always called");
         }
 
         System.out.println("---------------------------------------------------------------------\n");
@@ -203,7 +196,7 @@ public class MainOOP {
             heroRoster.add(enumOW.getHero());
         }
         /*
-        * Method Reference:
+         * Method Reference:
          * Kind	Example
          * Reference to a static method	ContainingClass::staticMethodName
          * Reference to an instance method of a particular object	containingObject::instanceMethodName
@@ -211,51 +204,43 @@ public class MainOOP {
          * Reference to a constructor	ClassName::new
          */
         heroRoster.sort(Hero::compareByName);
-
     }
 
     /**
      * @deprecated Explanation why this method is deprecated
      */
     @Deprecated
-    private static int metodoIntermedio(int[] v, int diQuanti) {
+    private static int intermediateMethod(int[] vector, int numberOfItems) {
         try {
-            return mediaInteraVett(v, diQuanti);
-        } catch (ArithmeticException errore) {
+            return average(vector, numberOfItems);
+        } catch (ArithmeticException e) {
             return -1111111111;
         }
     }
 
-
-    /** Le eccezioni si dividono in Checked e Unchecked
-     *   Checked: Non si possono ignorare
-     *   Unchecked: Si possono ignorare
-     *
-     *   Le eccezioni Unchecked si dividono in:
-     *   Errors: sono generati da qualcosa di esterno all'applicazione (ex: disco/connessione internet)
-     *   Runtime Exceptions: generati da qualcosa di interno all'applicazione (ex: logic/DivBy0)
-     *
-     *  Le eccezioni Checked sono prevedibili e devo essere gestite in modo da non far terminare brutalmente il programma
-     *  Le eccezioni Checked possono essere ri-lanciate al chiamante solo in modo esplicito
+    /**
+     * Exception are grouped in:
+     * Checked: Can't be ignored
+     * Unchecked: Can be ignored
+     * <p>
+     * Unchecked exceptions are grouped in:
+     * Errors: Generated by something that is external from the program (ex: disk/internet connection)
+     * Runtime Exceptions: Generated by something in the program (ex: logic errors / Divisions by 0)
+     * <p>
+     * Checked exceptions are known and have to be handled so that the program does not crash brutally
+     * Checked exceptions can be thrown again at the method called in an explicit way
      **/
-    private static int mediaInteraVett(int[] v, int diQuanti)
-    {
-        int somma = 0;
-        for (int i=0; i<diQuanti; i++)
-            somma+=v[i];
+    private static int average(int[] vector, int numberOfItems) {
+        int sum = 0;
+        for (int i = 0; i < numberOfItems; i++)
+            sum += vector[i];
 
-        if (diQuanti!=0)
-        return somma / diQuanti;
+        if (numberOfItems != 0)
+            return sum / numberOfItems;
         else
             throw new ArithmeticException();
-        //Viene lanciata l'eccezione verso l'alto
-        //che viene catturata dal costrutto try/catch il prima possibile
-        //se l'eccezione non è gestita viene sollevata alla fine da Java come errore
-        //Uncaught Exception
-
-
-
+        //An exception is thrown
+        //that can be handled by a try catch statement
+        //If the exception is not handled the program crashes and java raises this error: Uncaught Exception
     }
-
-
 }

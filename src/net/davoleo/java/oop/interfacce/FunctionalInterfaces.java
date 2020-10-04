@@ -8,8 +8,8 @@
 
 package net.davoleo.java.oop.interfacce;
 
-import net.davoleo.java.oop.enumerazioni.EnumOW;
-import net.davoleo.java.oop.enumerazioni.Hero;
+import net.davoleo.java.oop.enums.EnumOW;
+import net.davoleo.java.oop.enums.Hero;
 
 import java.util.List;
 import java.util.function.Consumer;
