@@ -1,6 +1,6 @@
 package net.davoleo.java.oop.enums;
 
-import net.davoleo.java.oop.esercizi.Fraction;
+import net.davoleo.java.practice.oop.Fraction;
 
 import java.util.ArrayList;
 import java.util.List;

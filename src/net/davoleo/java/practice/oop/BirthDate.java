@@ -1,4 +1,4 @@
-package net.davoleo.java.oop.esercizi;
+package net.davoleo.java.practice.oop;
 
 /*************************************************
  * Author: Davoleo

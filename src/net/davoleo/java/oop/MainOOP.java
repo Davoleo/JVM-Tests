@@ -2,9 +2,9 @@ package net.davoleo.java.oop;
 
 import net.davoleo.java.oop.enums.EnumOW;
 import net.davoleo.java.oop.enums.Hero;
-import net.davoleo.java.oop.esercizi.Fraction;
-import net.davoleo.java.oop.interfacce.FunctionalInterfaces;
+import net.davoleo.java.oop.interfaces.FunctionalInterfaces;
 import net.davoleo.java.oop.shapes.*;
+import net.davoleo.java.practice.oop.Fraction;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;

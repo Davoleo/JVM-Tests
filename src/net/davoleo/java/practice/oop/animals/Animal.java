@@ -1,4 +1,4 @@
-package net.davoleo.java.oop.esercizi.animals;
+package net.davoleo.java.practice.oop.animals;
 
 /*************************************************
  * Author: Davoleo

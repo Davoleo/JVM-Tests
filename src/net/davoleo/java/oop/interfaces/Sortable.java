@@ -1,4 +1,4 @@
-package net.davoleo.java.oop.interfacce;
+package net.davoleo.java.oop.interfaces;
 
 /*************************************************
  * Author: Davoleo
@@ -8,10 +8,9 @@ package net.davoleo.java.oop.interfacce;
  * Copyright - © - Davoleo - 2018
  **************************************************/
 
-public interface Ordinabile {
+public interface Sortable<T> {
 
-    boolean minoreDi(Object confrontaCon);
+    boolean lessThan(T confrontaCon);
 
-    @SuppressWarnings("unused")
-    boolean maggioreDi(Object confrontaCon);
+    boolean greaterThan(T confrontaCon);
 }

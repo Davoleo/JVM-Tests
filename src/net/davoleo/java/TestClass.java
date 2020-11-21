@@ -2,7 +2,7 @@ package net.davoleo.java;//Packages per importare i comandi
 //import java.lang.*;
 
 import net.davoleo.java.model.Chest;
-import net.davoleo.java.oop.interfacce.ClassHeader;
+import net.davoleo.java.oop.interfaces.ClassHeader;
 
 import java.util.ArrayList;
 import java.util.List;

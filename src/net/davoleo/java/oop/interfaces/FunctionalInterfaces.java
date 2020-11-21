@@ -6,7 +6,7 @@
  * Copyright - © - Davoleo - 2020
  * ----------------------------------- */
 
-package net.davoleo.java.oop.interfacce;
+package net.davoleo.java.oop.interfaces;
 
 import net.davoleo.java.oop.enums.EnumOW;
 import net.davoleo.java.oop.enums.Hero;
