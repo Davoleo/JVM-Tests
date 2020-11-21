@@ -8,7 +8,7 @@
 
 package net.davoleo.java.generics;
 
-import javafx.util.Pair;
+import kotlin.Pair;
 
 import java.util.Collection;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.List;
 public class GenericMethods {
 
     public static <K, V> boolean compare(Pair<K, V> pair1, Pair<K, V> pair2) {
-        return pair1.getKey().equals(pair2.getKey()) && pair1.getValue().equals(pair2.getValue());
+        return pair1.getFirst().equals(pair2.getFirst()) && pair1.getSecond().equals(pair2.getSecond());
     }
 
     @SuppressWarnings({"ManualArrayToCollectionCopy", "UseBulkOperation"})

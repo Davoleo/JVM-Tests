@@ -10,35 +10,37 @@ package net.davoleo.java;
 
 public class Helper {
 
-    //Stato interno
-    private String girlName;
+    //InternalStateVariables
+    private String word;
 
-    public Helper() {}
+    public Helper() {
+    }
 
     public Helper(String name) {
-        girlName = name;
+        word = name;
     }
 
     public void simpleMessage(String name) {
-        System.out.println("Ciao " + name);
-        System.out.printf("La tua prima ragazza era %s \n", this.getGirlName());
+        System.out.println("Hello " + name);
+        System.out.printf("Just shut up davoleo %s \n", this.getWord());
     }
 
 
     //Getter and Setter example
-    public void setGirlName(String girlName) {
-        this.girlName = girlName;
+    public void setWord(String word) {
+        this.word = word;
     }
 
-    public String getGirlName() {
-        return girlName;
+    public String getWord() {
+        return word;
     }
 
+    //Returns the average of a bunch of numbers
     public static int average(int... numbers) {
         int total = 0;
-        for(int x : numbers)
-            total+=x;
+        for (int x : numbers)
+            total += x;
 
-        return total/numbers.length;
+        return total / numbers.length;
     }
 }

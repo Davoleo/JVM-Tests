@@ -21,7 +21,7 @@ public class Alpaca {
 
         //Advanced Hello World
         String section;
-        System.out.println("Inserisci la sezione che vuoi avviare: ");
+        System.out.println("Input the name of the section you want to execute: ");
         System.out.println("Sezioni: 'advanced_hello' | 'constructors' | 'VLAM' | 'time'");
         section = tastiera.nextLine();
 
@@ -32,9 +32,9 @@ public class Alpaca {
 
             System.out.println("Inserisci il tuo nome: ");
             String name = tastiera.nextLine();
-            System.out.println("Inserisci il nome della tua prima ragazza: ");
-            h1.setGirlName(tastiera.nextLine());
-            h1.simpleMessage(name);
+                System.out.println("Inserisci il nome della tua prima ragazza: ");
+                h1.setWord(tastiera.nextLine());
+                h1.simpleMessage(name);
             break;
 
             case "constructors":
