@@ -1,4 +1,4 @@
-package net.davoleo.java;//Packages per importare i comandi
+package net.davoleo.java;
 //import java.lang.*;
 
 import net.davoleo.java.model.Chest;
