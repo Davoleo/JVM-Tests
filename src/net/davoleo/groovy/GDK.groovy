@@ -1,5 +1,7 @@
 package net.davoleo.groovy
 
+import java.beans.PropertyChangeListener
+
 class GDK {
 
     static void main(String[] args) {
@@ -84,9 +86,9 @@ Water's sound!
 
         assert exampleList - 5 == [7, 'i', 11]
         //Returns true if the element is removed (false otherwise)
-        assert exampleList.remove(5) == [7, 'i', 11]
-
-        assert exampleList.removeAt(2) == [5, 7, 11]
+        assert exampleList.remove((Object) 5)
+        //Returns the removed item
+        assert exampleList.removeAt(2) == 11
 
         //Checks if two sets have no items in common
         assert exampleList.disjoint(['z', 'x'])
@@ -95,7 +97,7 @@ Water's sound!
 
         //2.2 Maps
         def map = [
-                name: 'Jack', color: 'black', id: 1234
+            name: 'Jack', color: 'black', id: 1234
         ]
         assert map.get("name") == 'Jack'
         assert map['color'] == 'black'
@@ -124,6 +126,42 @@ Water's sound!
         assert [1, 3, 5] == ['a', 'few', 'words']*.size()
 
         //You can also use ranges in place of multiple indexes of a collection
-        assert exampleList[1..2] == [5, 7]
+        assert exampleList2[1..3] == [5, 6, 7]
+
+        //4 Working with DateTime values
+
+        //5 Useful Utilities
+        //Using ConfigObject ConfigSlurper ConfigOutput and integration with Java Properties
+        ConfigObject config = new ConfigSlurper().parse(new File("testScript.groovy").text)
+        assert config.app.name == 'Test44'
+        Writer writer = new FileWriter("test.properties")
+        Properties dotProperties = config.toProperties()
+        dotProperties.store(writer, "")
+
+        //Expando: Expandos can be extended with properties and methods at runtime
+        def expando = new Expando()
+        expando.name = 'kek'
+        expando.toString = { -> 'kek' }
+        expando.appendTo { String prefix -> prefix + " KEKW" }
+
+        assert expando.name == 'kek'
+
+        //Observable Collections (they trigger events when items are added removed or changed)
+        def event = null
+        def listener = {
+            if (it instanceof ObservableList.ElementAddedEvent)
+                event = it
+        } as PropertyChangeListener
+
+        ObservableList olist = [1, 2, 3] as ObservableList
+        olist.addPropertyChangeListener(listener)
+
+        olist.add(333)
+
+        assert event instanceof ObservableList.ElementAddedEvent
+        assert event.changeType == ObservableList.ChangeType.ADDED
+        assert event.index == 3
+        assert event.oldValue == null
+        assert event.newValue == 333
     }
 }
