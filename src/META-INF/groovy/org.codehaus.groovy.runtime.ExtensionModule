@@ -1,0 +1,5 @@
+moduleName=Test Module
+moduleVersion=1.0-SNAPSHOT
+# Multiple Classes are COMMA SEPARATED
+extensionClasses=net.davoleo.groovy.meta.ExampleIntegerExtension
+staticExtensionClasses=net.davoleo.groovy.meta.ExampleStaticHelperExtension
