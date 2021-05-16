@@ -8,8 +8,12 @@
 
 package net.davoleo.java.model;
 
+import groovy.transform.EqualsAndHashCode;
+
 import java.time.LocalDate;
 
+
+@EqualsAndHashCode
 public class Person {
 
     private final String name;
@@ -17,7 +21,8 @@ public class Person {
     private final Sex gender;
     private final String email;
 
-    public Person(String name, LocalDate birthday, Sex gender, String email) {
+    public Person(String name, LocalDate birthday, Sex gender, String email)
+    {
         this.name = name;
         this.birthday = birthday;
         this.gender = gender;
